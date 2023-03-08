@@ -1,7 +1,7 @@
 -- init.lua
 local options = {
   swapfile = false,
-  termguicolor = true,
+  termguicolors = true,
   backup = false,
   clipboard = "unamedplus",
   fileencoding = "utf-8",
@@ -18,8 +18,8 @@ local options = {
   number = true,
 }
 
-for i, j in pairs(options) do
+for i, j in ipairs(options) do
   vim.opt[i] = j
 end
 
-vim.opt.fillchars = { eob = " " _}
+vim.opt.fillchars = { eob = " " }
