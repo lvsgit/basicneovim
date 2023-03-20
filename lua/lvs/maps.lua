@@ -21,6 +21,7 @@ keymap('n', 'te', ':tabedit', opts)
 -- Split window
 keymap('n', 'ss', ':split<Return><C-w>w', opts)
 keymap('n', 'sv', ':vsplit<Return><C-w>w')
+
 -- Move window
 keymap('n', '<C-space>', '<C-w>w')
 keymap('', '<C-h>', '<C-w>h')

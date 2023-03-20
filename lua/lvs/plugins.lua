@@ -39,6 +39,17 @@ lazy.setup({
     build = ':TSUpdate',
   },
   'norcalli/nvim-colorizer.lua',
+  'nvim-lua/plenary.nvim',
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = 'nvim-lua/plenary.nvim',
+  },
+  {
+    'windwp/nvim-autopairs',
+    dependencies = 'hrsh7th/nvim-cmp',
+  },
+
+
   -- UI
   'tjdevries/colorbuddy.nvim',
 })

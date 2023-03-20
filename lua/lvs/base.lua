@@ -27,6 +27,9 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 
 -- Ui
 vim.wo.number = true
