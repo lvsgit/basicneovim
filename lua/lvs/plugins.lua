@@ -48,6 +48,11 @@ lazy.setup({
     'windwp/nvim-autopairs',
     dependencies = 'hrsh7th/nvim-cmp',
   },
+  'folke/which-key.nvim',
+  {
+    'numToStr/Comment.nvim',
+    dependencies = 'JoosepAlviste/nvim-ts-context-commentstring'
+  },
 
 
   -- UI
