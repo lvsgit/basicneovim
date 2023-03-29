@@ -53,8 +53,20 @@ lazy.setup({
     'numToStr/Comment.nvim',
     dependencies = 'JoosepAlviste/nvim-ts-context-commentstring'
   },
+  'lewis6991/gitsigns.nvim',
+  'dinhhuy258/git.nvim',
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    config = true
+  },
 
 
   -- UI
   'tjdevries/colorbuddy.nvim',
+  'nvim-lualine/lualine.nvim',
+  {
+    'akinsho/bufferline.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+  },
 })

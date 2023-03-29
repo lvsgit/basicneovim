@@ -2,6 +2,8 @@ local keymap = vim.keymap.set
 local opts = { silent = true, noremap = true }
 
 keymap('', 'x', '"_x')
+keymap('v', '<', '<gv')
+keymap('v', '>', '>gv')
 
 -- Increment/decrement
 keymap('n', '+', '<C-a>')
@@ -19,7 +21,7 @@ vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 -- New tab
 keymap('n', 'te', ':tabedit', opts)
 keymap('n', '<tab>', '<cmd>bnext<cr>', opts)
-keymap('n', '<S-tab>', '<cmd>bprevios<cr>', opts)
+keymap('n', '<S-tab>', '<cmd>bprevious<cr>', opts)
 
 -- Split window
 keymap('n', 'ss', ':split<Return><C-w>w', opts)
@@ -67,6 +69,21 @@ keymap('n', '<leader>sk', '<cmd>Telescope keymaps<cr>', opts)
 -- Comment
 keymap('n', '<leader>/', "<cmd>lua require('Comment.api').toggle.linewise.current()<cr>", opts)
 keymap('x', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts)
+
+-- Toggleterm
+keymap('n', '<c-h>', '<cmd>ToggleTerm direction=horizontal<cr>')
+keymap('n', '<c-u>', '<cmd>ToggleTerm direction=vertical<cr>', opts)
+keymap('n', '<c-o>', '<cmd>ToggleTerm direction=float<cr>')
+keymap('t', '<c-h>', '<cmd>ToggleTerm direction=horizontal<cr>')
+keymap('t', '<c-u>', '<cmd>ToggleTerm direction=vertical<cr>')
+keymap('t', '<c-o>', '<cmd>ToggleTerm direction=float<cr>')
+keymap('t', '<esc>', [[<C-\><C-n>]])
+function _lazygit_toggle()
+  require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true }):toggle()
+end
+
+keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+
 
 -- Config and more
 keymap('n', '<leader>bc', ':e $MYVIMRC | :cd %:p:h<cr>', opts)

@@ -13,11 +13,24 @@ whichkey.setup({
 })
 
 local tables = {
+  ['<leader>/'] = { name = 'Comment' },
   ['<leader>b'] = {
     name = '+basic config',
     c = { name = 'neovim' },
   },
   ['<leader>e'] = { name = 'File explorer' },
+  ['<leader>g'] = {
+    name = '+Git',
+    b = 'Blame window',
+    o = 'Open in remote',
+    p = 'Open pull request',
+    n = 'Create pull request',
+    d = 'Open Diff',
+    D = 'Close Diff',
+    l = 'Lazygit',
+    r = 'Revert commit',
+    R = 'Revert in current',
+  },
   ['<leader>s'] = {
     name = '+search',
     b = { name = 'buffer' },

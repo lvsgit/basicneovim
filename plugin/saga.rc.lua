@@ -7,5 +7,8 @@ saga.setup({
   },
   diagnostic = {
     on_insert = false,
+  },
+  lightbulb = {
+    enable = false,
   }
 })
