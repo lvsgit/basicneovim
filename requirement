@@ -1,0 +1,17 @@
+git
+fzf
+ripgrep
+curl
+tar
+npm(nodejs) -- recommend use nvm
+clangd
+pyright
+
+--for Linux:
+unzip
+
+
+--for Window:
+pwsh
+7zip or winrar
+

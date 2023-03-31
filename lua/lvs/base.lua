@@ -29,8 +29,8 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.o.timeout = 300
-vim.o.timeoutlen = 300
+vim.o.timeout = 500
+vim.o.timeoutlen = 500
 
 
 -- Ui

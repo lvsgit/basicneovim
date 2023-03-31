@@ -8,9 +8,6 @@ if not dap_ui_status_ok then
   return
 end
 
-
--- add other configs here
-
 dapui.setup {
   expand_lines = true,
   icons = { expanded = "", collapsed = "", circular = "" },
@@ -68,9 +65,11 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
+local path = vim.fn.stdpath "data" .. "/mason/packages"
+
 dap.adapters.python = {
   type = 'executable',
-  command = '/home/lvs/.local/share/nvim/mason/packages/debugpy/venv/bin/python',
+  command = path .. '/debugpy/venv/bin/python',
   args = { '-m', 'debugpy.adapter' },
 }
 
@@ -102,7 +101,7 @@ dap.configurations.python = {
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = 'executable',
-  command = '/home/lvs/.local/share/nvim/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
+  command = path .. '/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
 }
 
 dap.configurations.cpp = {

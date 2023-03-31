@@ -82,7 +82,7 @@ Group.new('Title', colors.green, colors.none, styles.none)
 Group.new('NvimTreeNormal', colors.red, colors.darkblack, styles.bold)
 
 -- Telescope
-Group.new('TelescopeBorder', colors.none, colors.none, styles.none)
+Group.new('TelescopeBorder', colors.blue, colors.none, styles.none)
 Group.new('TelescopePromptBorder', colors.none, colors.none, styles.none)
 Group.new('TelescopePromptPrefix', colors.black, colors.none, styles.none)
 Group.new('TelescopeNormal', colors.none, colors.black, styles.none)

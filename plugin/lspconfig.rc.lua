@@ -99,6 +99,11 @@ local servers = {
   'clangd'
 }
 
+require('mason-lspconfig').setup {
+  ensure_installed = servers,
+  automatic_installation = true,
+}
+
 for _, server in ipairs(servers) do
   lspconfig[server].setup {
     on_attach = function(client, bufnr)
