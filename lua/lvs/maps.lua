@@ -19,7 +19,7 @@ keymap('n', '<C-a>', 'ggVG')
 vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
-keymap('n', 'te', ':tabedit', opts)
+keymap('n', 'te', '<cmd>tabedit<cr>', opts)
 keymap('n', '<tab>', '<cmd>bnext<cr>', opts)
 keymap('n', '<S-tab>', '<cmd>bprevious<cr>', opts)
 
@@ -71,13 +71,13 @@ keymap('n', '<leader>/', "<cmd>lua require('Comment.api').toggle.linewise.curren
 keymap('x', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts)
 
 -- Toggleterm
-keymap('n', '<c-h>', '<cmd>ToggleTerm direction=horizontal<cr>')
+keymap('n', '<c-y>', '<cmd>ToggleTerm direction=horizontal<cr>')
 keymap('n', '<c-u>', '<cmd>ToggleTerm direction=vertical<cr>', opts)
 keymap('n', '<c-o>', '<cmd>ToggleTerm direction=float<cr>')
-keymap('t', '<c-h>', '<cmd>ToggleTerm direction=horizontal<cr>')
+keymap('t', '<c-y>', '<cmd>ToggleTerm direction=horizontal<cr>')
 keymap('t', '<c-u>', '<cmd>ToggleTerm direction=vertical<cr>')
 keymap('t', '<c-o>', '<cmd>ToggleTerm direction=float<cr>')
-keymap('t', '<esc>', [[<C-\><C-n>]])
+keymap('t', 'jkl', [[<C-\><C-n>]])
 function _lazygit_toggle()
   require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true }):toggle()
 end
@@ -86,4 +86,15 @@ keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, sil
 
 
 -- Config and more
-keymap('n', '<leader>bc', ':e $MYVIMRC | :cd %:p:h<cr>', opts)
+keymap('n', '<leader>bn', ':e $MYVIMRC | :cd %:p:h<cr>', opts)
+
+-- Dap
+keymap('n', '<leader>dt', function() require('dap').toggle_breakpoint() end, opts)
+keymap('n', '<F5>', function() require('dap').continue() end, opts)
+keymap('n', '<F8>', function() require('dap').step_over() end, opts)
+keymap('n', '<F9>', function() require('dap').step_into() end, opts)
+keymap('n', '<F10>', function() require('dap').step_out() end, opts)
+keymap('n', '<leader>dc', function()
+  require('dap').disconnect()
+  require('dapui').close()
+end, opts)

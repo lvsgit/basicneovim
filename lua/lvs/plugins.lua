@@ -26,10 +26,14 @@ lazy.setup({
   'glepnir/lspsaga.nvim', -- LSP UIs
 
   -- Cmp
-  'L3MON4D3/LuaSnip',
-  'hrsh7th/cmp-buffer',   -- nvim-cmp source for buffer words
-  'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
-  'hrsh7th/nvim-cmp',     -- Completion
+  {
+    'L3MON4D3/LuaSnip',
+    dependencies = 'hrsh7th/nvim-cmp',
+  },
+  'hrsh7th/cmp-buffer',       -- nvim-cmp source for buffer words
+  'hrsh7th/cmp-nvim-lsp',     -- nvim-cmp source for neovim's built-in LSP
+  'hrsh7th/nvim-cmp',         -- Completion
+  'saadparwaiz1/cmp_luasnip', -- luasnip cmp
 
   -- Utilities
   'nvim-tree/nvim-web-devicons',
@@ -61,6 +65,12 @@ lazy.setup({
     config = true
   },
 
+  -- Dap
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = 'rcarriga/nvim-dap-ui'
+  },
+
 
   -- UI
   'tjdevries/colorbuddy.nvim',
@@ -69,4 +79,13 @@ lazy.setup({
     'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
   },
+  {
+    'willothy/veil.nvim',
+    -- lazy = false,
+    opts = function()
+      return require('lvs.veil')
+    end
+    -- or configure with:
+    -- opts = { ... }
+  }
 })

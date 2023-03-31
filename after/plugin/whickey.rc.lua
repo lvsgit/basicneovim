@@ -16,7 +16,11 @@ local tables = {
   ['<leader>/'] = { name = 'Comment' },
   ['<leader>b'] = {
     name = '+basic config',
-    c = { name = 'neovim' },
+    n = { name = 'neovim' },
+  },
+  ['<leader>d'] = { name = '+Debug',
+    t = { name = 'toggle breakpoint' },
+    c = { name = 'close' },
   },
   ['<leader>e'] = { name = 'File explorer' },
   ['<leader>g'] = {

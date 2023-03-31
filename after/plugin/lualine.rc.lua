@@ -4,22 +4,11 @@ local colors = {
   darkcyan = '#004040',
   purple = '#6000a8',
   white = '#cccdd1',
-  darkblack = '#0a0a0a',
   black = '#000000',
-  background = '#2c2c2c',
-  grey = '#363636',
-  lightgrey = '#4d4d4d',
   red = '#cf4327',
-  green = '#00e756',
   darkgreen = '#009706',
-  blue = '#29adff',
   darkblue = '#067dcd',
-  yellow = '#ffd700',
-  teal = '#0b925c',
   orange = '#FFA500',
-  cyan = '#00B8BA',
-  brown = "#be620a",
-  pink = "#ff4394",
   tranferent = '#00000000'
 }
 
@@ -60,7 +49,7 @@ lualine.setup {
     -- section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     -- component_separators = { left = '', right = '' },
-    -- disabled_filetypes = { 'NvimTree' }
+    disabled_filetypes = { 'veil' }
   },
   refresh = {
     statusline = 200,
