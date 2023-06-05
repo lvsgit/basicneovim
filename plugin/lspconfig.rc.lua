@@ -93,10 +93,22 @@ lspconfig.lua_ls.setup {
     },
   },
 }
+lspconfig.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = { 'W391' },
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
 
 local servers = {
-  'pyright',
-  'clangd'
+  -- 'pyright',
+  'clangd',
 }
 
 for _, server in ipairs(servers) do

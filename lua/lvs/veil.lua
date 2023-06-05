@@ -1,13 +1,15 @@
 local status, builtin = pcall(require, "veil.builtin")
 if (not status) then return end
 local utils = require('veil.utils')
+local current_day = os.date("%A")
 
 local custom = {
   Rendered = {
     hl = '#00ff00',
   },
   sections = {
-    builtin.sections.animated(builtin.headers.frames_nvim, {
+    -- builtin.sections.animated(builtin.headers.frames_nvim, {
+    builtin.sections.animated(builtin.headers.frames_days_of_week[current_day], {
       hl = { fg = "#5de4c7" },
     }),
     builtin.sections.buttons({

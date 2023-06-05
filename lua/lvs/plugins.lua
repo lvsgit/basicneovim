@@ -64,6 +64,13 @@ lazy.setup({
     version = "*",
     config = true
   },
+  {
+    'folke/noice.nvim',
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify"
+    },
+  },
 
   -- Dap
   {
@@ -87,5 +94,6 @@ lazy.setup({
     end
     -- or configure with:
     -- opts = { ... }
-  }
+  },
+  { "lukas-reineke/indent-blankline.nvim" },
 })

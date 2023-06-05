@@ -43,6 +43,7 @@ local tables = {
     h = { name = 'help' },
     k = { name = 'keymap' },
     o = { name = 'recent files' },
+    n = { name = 'messages', },
     w = { name = 'all' },
   },
 }

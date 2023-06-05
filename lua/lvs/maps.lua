@@ -65,15 +65,19 @@ keymap('n', '<leader>sb', '<cmd>Telescope buffers<cr>', opts)
 keymap('n', '<leader>so', '<cmd>Telescope oldfiles<cr>', opts)
 keymap('n', '<leader>sf', function() builtin.find_files({ no_ignore = false, hidden = true }) end, opts)
 keymap('n', '<leader>sk', '<cmd>Telescope keymaps<cr>', opts)
+keymap('n', '<leader>sm', '<cmd>Telescope notify<cr>', opts)
 
 -- Comment
 keymap('n', '<leader>/', "<cmd>lua require('Comment.api').toggle.linewise.current()<cr>", opts)
 keymap('x', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts)
 
+-- Noice
+keymap('n', '<C-e>', '<cmd>Noice dismiss<cr>', opts)
+
 -- Toggleterm
-keymap('n', '<c-y>', '<cmd>ToggleTerm direction=horizontal<cr>')
-keymap('n', '<c-u>', '<cmd>ToggleTerm direction=vertical<cr>', opts)
-keymap('n', '<c-o>', '<cmd>ToggleTerm direction=float<cr>')
+keymap('n', '<c-y>', '<cmd>ToggleTerm 1 direction=horizontal<cr>')
+keymap('n', '<c-u>', '<cmd>ToggleTerm 2 direction=vertical<cr>', opts)
+keymap('n', '<c-o>', '<cmd>ToggleTerm 3 direction=float<cr>')
 keymap('t', '<c-y>', '<cmd>ToggleTerm direction=horizontal<cr>')
 keymap('t', '<c-u>', '<cmd>ToggleTerm direction=vertical<cr>')
 keymap('t', '<c-o>', '<cmd>ToggleTerm direction=float<cr>')

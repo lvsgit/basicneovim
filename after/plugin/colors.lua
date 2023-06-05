@@ -14,7 +14,6 @@ Color.new('darkgray', '#151515') -- slategray
 Color.new('emeral', '#059142')
 Color.new('violet', '#5e00bb')
 Color.new('purple', '#6000a8')
-
 Color.new('darkgreen', '#009706')
 Color.new('white', '#cccdd1')
 Color.new('darkblack', '#0a0a0a')
@@ -28,7 +27,7 @@ Color.new('green', '#00e756')
 Color.new('blue', '#29adff')
 Color.new('yellow', '#ffd700')
 Color.new('darkyellow', '#a9c79B')
-Color.new('teal', '#0b925c')
+Color.new('teal', '#152528')
 Color.new('orange', '#FFA500')
 Color.new('cyan', '#00B8BA')
 Color.new('brown', "#be620a")
@@ -71,20 +70,32 @@ Group.new('Directory', colors.green, colors.none, styles.bold)
 Group.new('ErrorMsg', colors.red, colors.none, styles.none)
 Group.new('LineNr', colors.darkgray, colors.none, styles.none)
 Group.new('Normal', colors.darkyellow, colors.none, styles.none)
-Group.new('NormalFloat', colors.blue, colors.darkblack, styles.bold)
-Group.new('Pmenu', colors.blue, colors.darkgray, styles.bold)
+Group.new('NormalFloat', colors.blue, colors.teal, styles.bold)
+Group.new('Pmenu', colors.blue, colors.teal, styles.bold)
 Group.new('PmenuSel', colors.none, colors.black, styles.reverse)
 Group.new('SignColumn', colors.none, colors.none, styles.none)
 Group.new('WinSeparator', colors.darkgray, colors.none, styles.none) -- Separator between windows split
 Group.new('Title', colors.green, colors.none, styles.none)
+Group.new('Folded', colors.green, colors.none, styles.bold)
 
 -- nvim-tree
 Group.new('NvimTreeNormal', colors.red, colors.darkblack, styles.bold)
 
+-- Noice
+Group.new('notifyBackground', colors.none, colors.teal, styles.none)
+
+-- Blankline
+Group.new('IndentBlanklineChar', colors.gray, colors.none, styles.none)
+Group.new('IndentBlanklineContextChar', colors.red, colors.none, styles.none)
+
+-- Lsp saga
+Group.new('SagaNormal', colors.none, colors.teal, styles.none)
+Group.new('SagaBorder', colors.blue, colors.teal, styles.none)
+
 -- Telescope
 Group.new('TelescopeBorder', colors.none, colors.none, styles.none)
 Group.new('TelescopePromptBorder', colors.none, colors.none, styles.none)
-Group.new('TelescopePromptPrefix', colors.black, colors.none, styles.none)
+Group.new('TelescopePromptPrefix', colors.red, colors.none, styles.none)
 Group.new('TelescopeNormal', colors.none, colors.black, styles.none)
 Group.new('TelescopePreviewTitle', colors.yellow, colors.black, styles.none)
 Group.new('TelescopePromptTitle', colors.blue, colors.black, styles.none)
